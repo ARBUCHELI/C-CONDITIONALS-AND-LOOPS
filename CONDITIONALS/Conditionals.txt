@@ -26,4 +26,99 @@ Move on when you’re ready!
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Coin Flip Demo
+----------------
+1 min
+Before we dive deep into the syntax of the if statement, let’s do a demo!
+
+title
+
+Here, we have a coinflip.c program that simulates a coin toss:
+
+	. 50% of the time, it’s Heads.
+
+	. 50% of the time, it’s Tails.
+
+* Instructions
+--------------
+Checkpoint 1 Passed
+1.
+Run the program twice to see an if else statement in action!
+
+How many times did it go Heads?
+
+
+Hint
+The code at the top of main() shows how you can create a random number during each execution: coin will be either 0 or 1.
+
+The part that we are going to focus on in this lesson is this:
+
+if (coin == 0) {
+  printf("Heads\n");
+} else {
+  printf("Tails\n");
+}
+
+coinflip.c
+----------
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+  // Create a number that’s 0 or 1
+  srand (time(NULL));
+  int coin = rand() % 2;
+
+  // If number is 0: Heads
+  // If it is not 0: Tails
+  if (coin == 0) {
+    printf("Heads\n");
+  } else {
+    printf("Tails\n");
+  }
+}
+
+code Explanation
+----------------
+The selected code generates a random number that is either 0 or 1, simulating a coin flip.
+
+srand(time(NULL)) seeds the random number generator with the current time.
+int coin = rand() % 2 generates a random number between 0 and 1 and stores it in coin.
+The if statement checks if coin is equal to 0. If it is, it prints “Heads”. Otherwise, it prints “Tails”.
+This code provides a random outcome of either “Heads” or “Tails” when executed.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
