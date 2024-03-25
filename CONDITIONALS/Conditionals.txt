@@ -150,6 +150,113 @@ int main() {
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Working with Operators
+------------------------
+5 min
+We’ve already seen relational operators at work. Conditionals incorporate them in all their forms.
+
+For example, we can do something like:
+
+if (grade >= 60) {
+  // Do something
+}
+
+In much the same fashion, we could’ve used a <=, or !=, or even ==. These relational operators naturally result in true or false expressions, which make them perfect for conditionals!
+
+However, sometimes we need to write multiple conditions in one conditional statement. In a past lesson, we learned about logical operators. We can use these operators here as well!
+
+Let’s recap the logical operators:
+
+	. && AND
+
+	. || OR
+
+	. ! NOT
+
+When placed in a conditional statement, logical operators work together to produce one true or false output across multiple conditions.
+
+For example:
+
+if (a > 0 && b > 0) {
+  printf("Positive\n");
+}
+
+The above conditional checks if both conditions are true, and if they both are, the if statement passes. If either a or b was a negative number, the if statement would be false.
+
+* Instructions
+--------------
+Checkpoint 1 Passed
+1.
+Change the logical operator in the conditional statement from a > 0 && b > 0 to a > 0 || b > 0.
+
+What do you think will happen?
+
+
+Hint
+Even though one of the numbers was negative, making one condition false, the if statement will still pass with true!
+
+This is because the logical operator || only requires one of its conditions to pass in order to be true.
+
+Checkpoint 2 Passed
+2.
+Now add another if statement that checks if both a > 0 and !(b > 0) are true and prints “Positive too” if they are.
+
+What do you think will happen?
+
+
+Hint
+Before, this && logical operator made the conditional false because b was negative. Now, however, running this code gets “Positive too” to print! So even though b > 0 is false, we negate 
+that with !, making it return true instead.
+
+positive.c
+----------
+#include <stdio.h>
+
+int main() {
+
+  int a = 10;
+  int b = -5;
+
+  if (a > 0 || b > 0) {
+    printf("Positive\n");
+  }
+  if (a > 0 && !(b > 0)) {
+    printf("Positive too\n");
+  }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
